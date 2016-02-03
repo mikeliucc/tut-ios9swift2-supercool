@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonCool: UIButton!
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var bg: UIImageView!
+    @IBOutlet weak var buttonUncool: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,14 @@ class ViewController: UIViewController {
         buttonCool.hidden = true;
         logo.hidden = false;
         bg.hidden = false;
+        buttonUncool.hidden = false;
+    }
+    
+    @IBAction func buttonUncoolClicked(sender: UIButton) {
+        buttonCool.hidden = false;
+        logo.hidden = true;
+        bg.hidden = true;
+        buttonUncool.hidden = true;
     }
 }
 
