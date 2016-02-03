@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Super Cool-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SuperCool" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Super Cool" id="BYZ-38-t0r" customClass="ViewController" customModule="SuperCool" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -42,6 +42,29 @@
                                     <action selector="buttonUncoolClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ppC-Mp-Wmm"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" shadowImage="milkyWay" translatesAutoresizingMaskIntoConstraints="NO" id="mzA-Mu-nrx">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="AJt-xW-EeW">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="ADN-qN-qHu">
+                                            <button key="customView" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="vER-vC-JV5">
+                                                <rect key="frame" x="307" y="11" width="52" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
+                                                <state key="normal" title="NEXT">
+                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonNextClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DkI-J7-Egz"/>
+                                                    <segue destination="KUE-2s-nka" kind="show" id="ISP-eI-y2F"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -50,17 +73,56 @@
                     <connections>
                         <outlet property="bg" destination="brj-Wh-iO4" id="g0s-Ev-67L"/>
                         <outlet property="buttonCool" destination="OWc-1h-uad" id="Ia2-Cg-qqw"/>
+                        <outlet property="buttonNext" destination="vER-vC-JV5" id="UKO-tf-E1n"/>
                         <outlet property="buttonUncool" destination="Pm9-wu-KjI" id="wg5-Dr-MtG"/>
                         <outlet property="logo" destination="ZQ2-pr-0mj" id="ir4-uL-Xho"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="208.5" y="433.5"/>
+            <point key="canvasLocation" x="-745.5" y="-178.5"/>
+        </scene>
+        <!--Hello World-->
+        <scene sceneID="MuZ-JU-gbt">
+            <objects>
+                <viewController title="Hello World" id="KUE-2s-nka" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F5q-gi-Xmx"/>
+                        <viewControllerLayoutGuide type="bottom" id="1ds-KI-HBR"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="TYz-3A-zjf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" shadowImage="milkyWay" translatesAutoresizingMaskIntoConstraints="NO" id="cTx-Vv-hZO">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="asd-HW-qdT">
+                                        <barButtonItem key="leftBarButtonItem" title="PREVIOUS" style="plain" id="9bZ-ln-XAC">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="sW9-Qt-LFp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="Life's like a box of chocolate..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEN-fl-TCp">
+                                <rect key="frame" x="69" y="319" width="246" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9B-Ks-nLv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-303.5" y="-178.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="In A Whisper - 1920x1200" width="1920" height="1200"/>
+        <image name="milkyWay" width="1200" height="1920"/>
         <image name="spiderman2" width="259" height="194"/>
     </resources>
 </document>
